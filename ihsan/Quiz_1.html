@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<h3>Aplikasi Kalkulator</h3>
+<small>Nama : M. Ihsan Yusuf Lubis </small><br/>
+<small>NIM : 0701183258 </small><br/>
+<hr/>
+<br/>
+Angka 1 : <input type='text' id='Angka1'><br/>
+Angka 2 : <input type='text' id='Angka2'><br/><br/>
+Operator
+<select id='operator'>
+	<option value='tambah'>+</option>
+	<option value='kurang'>-</option>
+	<option value='bagi'>/</option>
+	<option value='kali'>*</option>
+
+</select>
+<br/><br/>
+<button onclick="proses()">Hitung</button>
+<div><h4>Hasil = <span id="hasil"></span></div>
+<hr/>
+
+<script>
+
+function proses(){
+	var dAngka1 = document.getElementById('Angka1').value;
+	var dAngka2 = document.getElementById('Angka2').value;
+	var operator = document.getElementById('operator').value;
+	var hasil =0;
+
+	if(dAngka1 == '' || dAngka2 ==''){
+	window.alert("Tidak Boleh Kosong!!!");
+	}
+	else{
+			angka1 = parseInt(dAngka1);
+			angka2 = parseInt(dAngka2);
+			if (operator == 'tambah') {
+				hasil = angka1 + angka2;
+				document.getElementById('hasil').innerHTML= hasil;
+			}
+			else if (operator == 'kurang') {
+				hasil = angka1 - angka2;
+				document.getElementById('hasil').innerHTML= hasil;
+			}
+			else if (operator == 'bagi') {
+				hasil = angka1 / angka2;
+				document.getElementById('hasil').innerHTML= hasil;
+			}
+			else if (operator == 'kali') {
+				hasil = angka1 * angka2;
+				document.getElementById('hasil').innerHTML= hasil;
+			}
+			}
+}
+				
+</script>
+<html>
