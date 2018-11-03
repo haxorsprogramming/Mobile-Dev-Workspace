@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+Angka 1 <input type="text" id="angka1" />
+Angka 2 <input type="text" id="angka2" />
+<br/>
+<br/>
+Operator
+<select id="operator">
+	<option value="tambah">+</option>
+	<option value="kurang">-</option>
+	<option value="bagi">:</option>
+	<option value="kali">X</option>
+</select>
+<button onclick="proses()">Hitung</button>
+<br/>
+<br/>
+<hr/>
+<div>
+	Hasilnya : <span id="hasilku"></span>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	function proses() {
+		var angka1 = document.getElementById('angka1').value;
+		var angka2 = document.getElementById('angka2').value;
+		var operator = document.getElementById('operator').value;
+		var hasil = 0;
+
+		// window.alert(operator);
+
+		if (angka1 == '' || angka2 =='') {
+			window.alert("Jangan Kosong");
+		}else
+		{
+			angka1i = parseInt(angka1);
+			angka2i = parseInt(angka2);
+			if (operator == 'tambah') {
+				hasil = angka1i + angka2i;
+				// window.alert(hasil);
+				document.getElementById('hasilku').innerHTML= hasil;
+			}
+			else if (operator == 'kurang') {
+				hasil = angka1i - angka2i;
+				// window.alert(hasil);
+				document.getElementById('hasilku').innerHTML= hasil;
+			}
+			else if (operator == 'kali') {
+				hasil = angka1i * angka2i;
+				// window.alert(hasil);
+				document.getElementById('hasilku').innerHTML= hasil;
+			}
+			else if (operator == 'bagi') {
+				hasil = angka1i / angka2i;
+				// window.alert(hasil);
+				document.getElementById('hasilku').innerHTML= hasil;
+			}
+		}
+		
+		
+					
+		
+	}
+</script>
