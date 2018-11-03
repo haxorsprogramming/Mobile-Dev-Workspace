@@ -1,1 +1,1 @@
-Nama : Fauzan
+Nama : Ahmad Fauzan Nasution  
