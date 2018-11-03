@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Nama Karyawan
+<select id="namaKaryawan">
+	<option value="adit">Adit</option>
+	<option value="diana">Diana</option>
+	<option value="adam">Adam</option>
+</select>
+<br/>
+<br/>
+Total Gaji <input type="text" id="gajinya" />
+<br/>
+<br/>
+<button onclick="proses()">Tambah</button>
+<br/>
+<br/>
+<hr/>
+<table border="1">
+	<tr>
+		<th>Nama</th>
+		<th>Gaji</th>
+	</tr>
+	<tr>
+		<td>Adit</td>
+		<td id="gajiAdit">Rp. 0</td>
+	</tr>
+	<tr>
+		<td>Diana</td>
+		<td id="gajiDiana">Rp. 0</td>
+	</tr>
+	<tr>
+		<td>Adam</td>
+		<td id="gajiAdam">Rp. 0</td>
+	</tr>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+	var gjAdit = 0;
+	var gjDiana = 0;
+	var gjAdam = 0;
+	function proses() {
+		var karyawan = document.getElementById('namaKaryawan').value;
+		var gajinya = document.getElementById('gajinya').value;
+
+		if (gajinya === '') {
+			window.alert("Jangan Kosong Dong");
+			document.getElementById('gajinya').focus();
+		}else {
+			gajiint=parseInt(gajinya);
+			if (karyawan == 'adit') {
+			gjAdit +=gajiint;
+			document.getElementById('gajiAdit').innerHTML = "Rp."+gjAdit;
+			}
+			else if (karyawan == 'diana') {
+				gjDiana += gajiint;
+				document.getElementById('gajiDiana').innerHTML = "Rp."+gjDiana;
+			}
+			else if (karyawan == 'adam') {
+				gjAdam += gajiint;
+				document.getElementById('gajiAdam').innerHTML = "Rp."+gjAdam;
+			}
+		}
+		
+		
+					
+		
+	}
+</script>
