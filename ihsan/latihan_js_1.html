@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+Nama karyawan
+<select id='nmKaryawan'>
+<option value='adit'>Adit</option>
+<option value='adam'>Adam</option>
+<option value='diana'>Diana</option>
+</select><br>
+Total gaji <input type='text' id='jlhGajiInput'>
+<br/><br/>
+<button onclick='proses()'>tambah</button><br/><br/>
+<hr/>
+<table border ='1'/>
+<tr>
+<th>Nama</th><th>Gaji</th>
+</tr>
+<tr>
+<td>Adit</td><td id='dGajiAdit'>Rp.0</td>
+</tr>
+<tr>
+<td>Adam</td><td id='dGajiAdam'>Rp.0</td>
+</tr>
+<tr>
+<td>Diana</td><td id='dGajiDiana'>Rp.0</td>
+</tr>
+</table>
+<script>
+
+var gjAdit = 0;
+var gjAdam = 0;
+var gjDiana = 0;
+
+function proses(){
+	var nmKar = document.getElementById('nmKaryawan').value;
+	var inputGaji = document.getElementById('jlhGajiInput').value;
+	if(inputGaji === ''){
+		window.alert("Jumlah Gaji Tidak Boleh Kosong!!!");
+		document.getElementById('jlhGajiInput').focus(); 
+	}else{
+	if(nmKar === 'adit'){
+	   gjAdit = gjAdit + parseInt(inputGaji);
+	   document.getElementById('dGajiAdit').innerHTML = "Rp. " + gjAdit;
+	}else if(nmKar === 'adam'){
+	   gjAdam = gjAdam + parseInt(inputGaji);
+	   document.getElementById('dGajiAdam').innerHTML = "Rp. " + gjAdam;
+	}else if(nmKar === 'diana'){
+	   gjDiana = gjDiana + parseInt(inputGaji);
+	   document.getElementById('dGajiDiana').innerHTML = "Rp. " + gjDiana;
+	}
+	}
+
+}
+
+</script>
+</body>
+</html>
