@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+<h3>Aplikasi Kalkulator</h3>
+<small>Nama : Dimas Izha Pradika</small><br/>
+<small>NIM &nbsp : 0701182140</small><br/>
+<hr/>
+
+<br/>
+Angka 1 : <input type="text" id="angka1"><br/>
+Angka 2 : <input type="text" id="angka2"><br/><br/>
+
+Operator
+<select id="plhOperator">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="/">/</option>
+	<option value="*">*</option>
+</select>
+
+<br/><br/>
+<button onclick='proses()'>Hitung</button>
+<div><h4>Hasil = <span id="hasill"></span></h4></div>
+<hr/>
+
+<script>
+
+function proses(){
+	var angka1 = (document.getElementById('angka1').value);
+	var angka2 = (document.getElementById('angka2').value);
+	var Operator = (document.getElementById('plhOperator').value);
+	var hasil = 0;
+
+	if (angka1 == '' || angka2 == ''){
+			window.alert("Tidak boleh kosong!!");
+	}else
+	{
+	angka1 = parseInt(angka1);
+	angka2 = parseInt(angka2);
+	if(Operator === '+'){
+		hasil = angka1 + angka2;
+		document.getElementById('hasill').innerHTML = hasil;
+	}else if (Operator === '-'){
+		hasil = angka1 - angka2;
+		document.getElementById('hasill').innerHTML = hasil;
+	}else if (Operator === '/'){
+		hasil = angka1 / angka2;
+		document.getElementById('hasill').innerHTML = hasil;
+	}else if (Operator === '*'){
+		hasil = angka1 * angka2;
+		document.getElementById('hasill').innerHTML = hasil;
+	}
+	
+	}
+}
+
+</script>
+</html>
