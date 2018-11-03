@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Nama Karyawan
+	<select id='nmKaryawan'>
+		<option id='Joko'>Joko</option>
+		<option id='Fandi'>Fandi</option>
+		<option id='Alex'>Alex</option>
+		<option id='Wendi'>Wendi</option>
+	</select></br>
+Input Gaji
+	<input type='text' id='jlhGajiInput'/></br></br>
+<button onclick='proses()'>Tambah</button></br></br>
+<hr>
+<table border=1>
+<tr>
+	<th>Nama</th>
+	<th>Total Gaji</th>
+</tr>
+<tr>
+	<td >Joko</td><td id='dGajiJoko'>Rp.</td>
+</tr>
+<tr>
+	<td >fandi</td><td id='dGajiFandi'>Rp.</td>
+</tr>
+<tr>
+	<td >Alex</td><td id='dGajiAlex'>Rp.</td>
+</tr>
+<tr>
+	<td >Wendi</td><td id='dGajiWendi'>Rp.</td>
+</tr>
+</table>
+<script>
+	
+	var gjJoko = 0;
+	var gjFandi = 0;
+	var gjAlex = 0;
+	var gjWendi = 0;
+
+function proses(){
+	
+	var nmKar = document.getElementById('nmKaryawan').value;
+	var inputGaji = document.getElementById('jlhGajiInput').value;
+//parseInt = mengubah string menjadi integer
+
+if(inputGaji === ''){
+	window.alert("Input gaji tidak boleh kosong");
+	document.getElementById('jlhGajiInput').focus();
+}else{	
+if(nmKar==='Joko'){
+	gjJoko = gjJoko + parseInt(inputGaji);
+	document.getElementById('dGajiJoko').innerHTML = "Rp." +gjJoko;
+}
+else if(nmKar==='Fandi'){
+	gjFandi = gjFandi + parseInt(inputGaji);
+	document.getElementById('dGajiFandi').innerHTML = "Rp." +gjFandi;
+}
+else if(nmKar==='Alex'){
+	gjAlex = gjAlex + parseInt(inputGaji);
+	document.getElementById('dGajiAlex').innerHTML = "Rp." +gjAlex;
+}
+else if(nmKar==='Wendi'){
+	gjWendi = gjWendi + parseInt(inputGaji);
+	document.getElementById('dGajiWendi').innerHTML = "Rp." +gjWendi;
+	}
+}
+}
+</script>
+</body>
+</html>
