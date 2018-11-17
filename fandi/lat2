@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+<button onclick='jalankan()'>Start</button><br/><br>
+<div> Total Detik	: <span id='divDetik'></span></div><br>
+<div> Total Menit	: <span id='divMenit'></span></div><br>
+<div> Total Jam	: <span id='divJam'></span></div><br>
+
+
+<script>
+var detik = 0;
+var menit = 0;
+var jam = 0;
+function waktu(){
+	document.getElementById('divDetik').innerHTML = detik;
+	document.getElementById('divMenit').innerHTML = menit;
+	document.getElementById('divJam').innerHTML = jam;
+	detik++;
+	if (detik == 60){
+		detik = 0;
+		menit++;
+	}
+	if (menit == 60) {
+		menit = 0;
+		jam++;
+	}
+}
+function jalankan(){
+	setInterval(waktu,10);
+}
+
+</script>
+</body>
+</html>
