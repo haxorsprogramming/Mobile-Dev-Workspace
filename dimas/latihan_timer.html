@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Timer
+	</title>
+</head>
+<body>
+	<button onclick="jalankan()"> Start Timer </button>
+	<br/>
+	<br/>
+	<h1>
+	<div> Detik &nbsp: <span id="divDetik"></span></div><br/>
+	<div> Menit : <span id="divMenit"></span></div><br/>
+	<div> Jam &nbsp&nbsp : <span id="divJam"></span></div><br/>
+	</h1>
+	<script>
+		var Detik = 0;
+		var Menit = 0;
+		var Jam   = 0;
+
+		function waktu() {
+			document.getElementById('divDetik').innerHTML = Detik;
+			document.getElementById('divMenit').innerHTML = Menit;
+			document.getElementById('divJam').innerHTML = Jam;
+			Detik++;
+
+			if (Detik == 60) {
+				Detik = 0;
+				Menit++;
+			}
+			
+			if (Menit == 60) {
+				Menit = 0;
+				Jam++;
+			}
+
+		}
+
+		function jalankan() {
+			setInterval(waktu, 1000);
+		}
+	</script>
+
+</body>
+</html>
