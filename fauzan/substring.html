@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Olah Kata Di Dalam TextBox, ambil karakter ke 2 sampai ke 6
+<label>Masukkan Text :</label>
+<input type="text" id="txtKata" onkeydown="ambilString()">
+<button type="submit" id="btnz" onclick="ambilStringz()">Kirim</button><br/>
+Hasilnya :<div id="txtHasil"></div>
+</body>
+</html>
+<script type="text/javascript">
+	function ambilString() {
+		var kata = document.getElementById('txtKata').value;
+
+		kataSub = kata.substring(1,6);
+		document.getElementById('txtHasil').innerHTML= kataSub;	
+	}
+</script>
