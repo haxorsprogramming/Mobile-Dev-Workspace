@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+Olah kata dalam teksbox, ambil karakter ke 2 sampai ke 6 <br/>
+masukkan teks=<input type='text' id='txtKata'>
+
+<button onclick='olahKata()'>Olah Kata</button>
+<div id='txtHasil'>Hasil</div>
+<script>
+function olahKata()
+{
+ var kata = document.getElementById('txtKata').value;
+ var hasilOlah = kata.substring(1,5);
+ document.getElementById('txtHasil').innerHTML = hasilOlah;
+}
+
+</script>
+</body>
+</html>
