@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+Olah kata di dalam teksbox,ambil karakter ke 2 sampai ke 6 <br/>
+Masukan teks = <input type ='text'id ='txtkata'/>
+
+<button onclick='olahkata()'>Olah kata</button>
+<div id='txtHasil'>Hasil</div>
+<script>
+function olahkata()
+{
+var kata = document.getElementById('txtkata').value;
+var hasilOlah = kata.substring(1, 5);
+document.getElementById('txtHasil').innerHTML = hasilOlah;
+}
+olahkata();
+</script>
+</body>
+</html>
