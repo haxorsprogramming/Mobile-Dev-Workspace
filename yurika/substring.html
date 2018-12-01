@@ -1,0 +1,19 @@
+latihan fungsi string
+<!DOCTYPE html>
+<html>
+<body>
+Olah kata di dalam teksbox , ambil karakter ke 1 sampai ke 10 <br/>
+Masukkan teks = <input type='text' id='txtKata'/>
+<button onclick = 'olahKata()'>Olah Kata</button>
+<div id='txtHasil'>Hasil</div>
+<script>
+function olahKata()
+{
+var kata = document.getElementById('txtKata').value;
+var hasilOlah = kata.substring(1,9);
+document.getElementById('txtHasil').innerHTML = hasilOlah;
+}
+
+</script>
+</body>
+</html>
