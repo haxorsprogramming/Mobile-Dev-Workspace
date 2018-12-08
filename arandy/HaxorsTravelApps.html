@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Haxors </title>
+</head>
+<body>
+
+	<h4> Haxors Travel Apps </h4>
+	<div>
+		Masukkan Kode Tiket : <input type="text" id="kodeTiket">
+	</div>
+	<br/>
+		<button onclick="proses()">Hitung</button>
+	
+
+	<div style="border: 2px dotted red;margin: 8px;padding: 8px;">
+		<strong> Hasil Pengolahan </strong><br />
+		Kode Tiket : <span id="TxtKodeTiket"></span><br />
+		Maskapai : <span id="TxtMaskapai"></span><br />
+		No. Pesawat : <span id="TxtNoPesawat"></span><br />
+		Tujuan : <span id="TxtTujuan"></span><br />
+		Kelas : <span id="TxtKelas"></span><br />
+		Harga Tiket : <span id="TxtHargaTiket"></span><br />
+	</div>
+
+	Maskapai
+
+	<ul>
+		<li>GI : Garuda Indonesia</li>
+		<li>CL : Citylink</li>
+		<li>LA : Lion Air</li>
+		<li>BA : Batik Air</li>
+		<li>SA : Sriwijaya Air</li>
+	</ul>
+
+	Tujuan
+
+	<ul>
+		<li>MDN : Medan</li>
+		<li>SBY : Surabaya</li>
+		<li>JKT : Jakarta</li>
+		<li>BDN : Bandung</li>
+		<li>PLM : Palembang</li>
+	</ul>
+</body>
+<!-- GI-MDN-EK-9292PL -->
+</html>
+<script  type="text/javascript">
+	function proses()
+	{
+		var kodeTiket = document.getElementById('kodeTiket').value;
+		var TxtKodeTiket = document.getElementById('TxtKodeTiket');
+		var TxtMaskapai = document.getElementById('TxtMaskapai');
+		var maskapai = kodeTiket.substr(0,2);
+		var TxtNoPesawat = document.getElementById('TxtNoPesawat');
+		var TxtTujuan = document.getElementById('TxtTujuan');
+		var tujuan = kodeTiket.substr(3,3);
+		var TxtKelas = document.getElementById('TxtKelas');
+		var kelas = kodeTiket.substr(7,2);
+		var TxtHargaTiket = document.getElementById('TxtHargaTiket');
+		var hargatujuan = 0;
+		var hargakelas = 0;
+
+	TxtKodeTiket.innerHTML = kodeTiket;
+
+	if (maskapai == "GI"){
+		TxtMaskapai.innerHTML="Garuda Indonesia";
+	} else if (maskapai == "CL") {
+		TxtMaskapai.innerHTML = "Citylink";
+	} else if (maskapai == "LA") {
+		TxtMaskapai.innerHTML = "Lion Air";
+	} else if (maskapai == "BA") {
+		TxtMaskapai.innerHTML = "Batik Air";
+	} else if (maskapai == "SA") {
+		TxtMaskapai.innerHTML = "Sriwijaya Air";
+	} else {
+		TxtMaskapai.innerHTML = "Kode Tiket Salah";
+	}
+
+	if (tujuan == "MDN") {
+		TxtTujuan.innerHTML = "Medan";
+		hargatujuan += 500000;
+	} else if (tujuan == "SBY") {
+		TxtTujuan.innerHTML = "Surabaya";
+		hargatujuan += 600000;
+	} else if (tujuan == "JKT") {
+		TxtTujuan.innerHTML = "Jakarta";
+		hargatujuan += 700000;
+	} else if (tujuan == "BDG") {
+		TxtTujuan.innerHTML = "Bandung";
+		hargatujuan += 800000;
+	} else if (tujuan == "PLM") {
+		TxtTujuan.innerHTML = "Palembang";
+		hargatujuan += 900000;
+	} else {
+		TxtTujuan.innerHTML = "Kode Tiket Salah";
+	}
+	
+	if (kelas == "EK") {
+		TxtKelas.innerHTML = "Ekonomi";
+		hargakelas += 1000000;
+	} else if (kelas == "BS") {
+		TxtKelas.innerHTML = "Bisnis";
+		hargakelas += 2000000;
+	} else {
+		TxtKelas.innerHTML = "Kode Tiket Salah";
+	}
+
+	TxtNoPesawat.innerHTML = kodeTiket.substr(10,4);
+	console.log(hargakelas);
+	console.log(hargatujuan);
+	TxtHargaTiket.innerHTML = hargakelas + hargatujuan;
+
+}
+</script>
+
