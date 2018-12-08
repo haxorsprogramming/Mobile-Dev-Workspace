@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> </title>
+</head>
+<body>
+<h3>Haxors Traveler</h3>
+<div>
+ Masukan kode Tiket Kamu :<input type="text"id="kodeTik">
+</div>
+<br/>
+<button onclick="proses()">Hitung</button>
+<div style="border-color:red'><strong>Hasil Pengolahan</strong>
+ <br/>
+ Kode Tiket: <span id="Hasilkode"></span> <br/>
+maskapai : <span id="HasilMask"></span><br/>
+No.Pesawat : <span id="HasilNP"></span><br/>
+Tujuan: <span id="HasilTujuan"></span><br/>
+Kelas: <span id="HasilKelas"></span><br/>
+Harga Tiket: <span id="HasilTiket"></span><br/>
+</div>
+<br/>
+Maskapai
+<ul>
+  <li>GI:Garuda indonesia</li>
+  <li>Cl:Citylink</li>
+  <li>LA:Lion Air</li>
+  <li>BA:Batik Air</li>
+  <li>SA:Sriwijaya Air</li>
+</ul>
+<br/>
+Tujuan
+<ul>
+<li>MDN:Medan</li>
+<li>SBY:Surabaya</li>
+<li>JKT:jakarta</li>
+<li>BDG:Bandung</li>
+<li>LMP:Lampung</li>
+</ul>
+</body>
+</html>
+<!--GI-MDN-EK-9292PL-->
+
+<script type="text/javascript'>
+function proses(){
+var kodeTik= document.getElementById('kodetIK').value;
+var Hasilkode= document.getElementById('Hasilkode');
+var HasilMask= document.getElementById('HasilMask);
+var HasilNP= document.getElementById('HasilNP');
+var HasilTujuan= document.grtElementById('HasilTujuan');
+var HasilKelas= document.getElementById('HasilKelas');
+var Kelasnya= kodeTik substr(3,3);
+var HasilKelas=document.getElementById('HasilKelas');
+var Kelasnya= kodetik.substr(7,2);
+var HasilTiket= document.getElementById('HasilTiket');
+var hargatujuan =0;
+var hargakelas  =0;
+HasilKode.innerHTML=kodetik;
+if(masknya=='GI){
+HasilMask.innerHTML="Garuda Indonesia";
+}else if (masknya=='CI){
+HasilMask.innerHTML="Lion Air";
+}else if(masknya=='BA'){
+HasilMask.innerHTML="Batik Air";
+}else if(masknya=='SA'){
+HasilMask.innerHTML="kode Tiket Salah";
+}
+if(tujuannya=='MDN'){
+HasilTujuan.innerHTML="Medan";
+hargatujuan +=500000
+}else if(Tujuannya=='SBY'){
+HasilTujuan.innerHTML="Surabaya";
+hargatujuan +=600000
+}else if (tujuannya=='JKT'){
+HasilTujuan.innerHTML="Jakarta";
+hartujuan +=700000;
+HasilTujuan.innerHTML="Bandung";
+hargatujuan +=800000
+}else if(tujuannya=='LMP'){
+HasilTujuan.inner.HTML="Lampung";
+hargatujuan +=800000;
+}else{
+HasilTujuan.innerHTML="Lampung";
+hargatujuan +=900000
+}else{
+HasilTujuan.innerHTML="kode Tiket Salah";
+}if(kelasnya=="EK"){
+HasilKelas.innerHTML="Ekonomi";
+hargakelas +=1000000;
+}else if(kelasnya=="BS"){
+HasilKelas.innerHTML="Bisnis";
+hargakelas +=2000000
+}else{
+HasilKelas.innerHTML="Kode Tiket salah";
+}
+HasilNP.innerHTML=kodeTik.substra(10,4);
+console.log(hargakelas);
+console.log(hargatujuan);
+HasilTiket.innerHTML=
+hargakelas + hargatujuan;
+}
+</script>
+
+
+
