@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<div>
+<h5>Pemesanan Tiket</h5>
+ No Tiket : <input type='text' id='txtKata'/>
+<button onclick='olahKata()'>Olah</button>
+<hr/>
+</div>
+<div>
+No Tiket : <span id='capTiket'></span><br/>
+Maskapai : <span id='capMaskapai'></span><br/>
+No. Pesawat : <span id='capPesawat'></span><br/>
+Tujuan : <span id='capTujuan'></span><br/>
+Kelas : <span id='capKelas'></span><br/>
+</div>
+<script>
+function olahKata(){
+var noTiket = document.getElementById('txtKata').value;
+var bahanTiket = noTiket.split('-');
+var Maskapai = bahanTiket[0];
+var Pesawat = bahanTiket[1];
+var Tujuan = bahanTiket[2];
+var Kelas = bahanTiket[3];
+
+
+if(Maskapai === "GI"){
+document.getElementById('capMaskapai').innerHTML = "Garuda Indonesia";
+}else if(Maskapai === "LN"){
+document.getElementById('capMaskapai').innerHTML = "Lion Air";
+}else{
+window.alert("maskapai tidak terdaftar");
+}
+
+if(Tujuan === "MDN"){
+document.getElementById('capTujuan').innerHTML = "Medan";
+}else if(Tujuan === "JKT"){
+document.getElementById('capTujuan').innerHTML = "Jakarta";
+}else{
+window.alert("maskapai tidak terdaftar");
+}
+
+
+if(Kelas === "EK"){
+document.getElementById('capKelas').innerHTML = "Ekonomi";
+}else if(Kelas === "EXE"){
+document.getElementById('capKelas').innerHTML = "Eksekutif";
+}else{
+window.alert("maskapai tidak terdaftar");
+}
+
+
+}
+
+</script>
+</body>
+</html>
