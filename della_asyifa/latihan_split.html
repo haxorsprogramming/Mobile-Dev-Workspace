@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+<h5> Pemesanan Tiket</h5>
+No Tiket : <input type='text' id ='txtKata'/>
+<button onclick='olahKata()'>olah</button>
+<hr/>
+</div>
+<div>
+No Tiket : <span id='capTiket'></span><br/>
+Maskapai : <span id='capMaskapai'></span><br/>
+No.Pesawat : <span id='capPesawat'></span><br/>
+Tujuan : <span id='capTujuan'></span><br/>
+Kelas : <span id='capKelas'></span><br/>
+<script>
+function olahKata(){
+var noTiket = document.getElementById('txtKata').value;
+var bahanTiket = noTiket.split('-');
+var Maskapai = bahanTiket[0];
+var Pesawat = bahanTiket[1];
+var Tujuan = bahanTiket[2];
+var Kelas = bahanTiket[3];
+
+if(Maskapai === "GI"){
+document.getElementById('capMaskapai').innerHTML = "Garuda Indonesia";
+}else if (Maskapai === "LN"){
+document.getElementById('capMaskapai').innerHTML = "Lion Air";
+}else{
+window.alert("Maskapai tidak terdaftar");
+
+}
+if(Tujuan === "BTH"){
+document.getElementById('capTujuan').innerHTML = "BATAM";
+}else if(Tujuan === "JKT"){
+document.getElementById('capTujuan').innerHTML = "JAKARTA";
+}else if(Tujuan === "BDG"){
+document.getElementById('capTujuan').innerHTML = "BANDUNG";
+}else{
+window.alert("Tujuan tidak terdaftar");
+
+}
+if(Kelas === "EK"){
+document.getElementById('capKelas').innerHTML = "EKONOMI";
+}else if(Kelas === "BS"){
+document.getElementById('capKelas').innerHTML = "BUSINESS";
+}
+}
+</script>
+</body>
+</html?
