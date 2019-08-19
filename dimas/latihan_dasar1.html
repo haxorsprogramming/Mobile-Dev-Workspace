@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan Javascript</title>
+</head>
+<body>
+	<input type="text" id="txtKata" />
+	<button onclick="proses()">Proses</button>
+	<hr />
+	<div id="hasil">Result of Text here !!</div>
+	<script>
+		function proses() {
+			var kata = document.getElementById('txtKata').value;
+			document.getElementById('hasil').innerHTML = kata;
+		
+		}
+
+
+	</script>
+
+</body>
+</html>
