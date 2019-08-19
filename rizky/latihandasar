@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> Alamat web pertama saya</h1>
+<p id='pertama'> saya kuliah di universitas islam negeri sumatra utara</p>
+<p id='kedua'> saya masuk di jurusan ilmu komputer</p>
+<button onclick='buatPesan()'>klik saya!!</button>
+<button onclick='jadiPesan()'>Tekan saya??</button>
+<script>
+	function buatPesan()
+	{
+	document.getElementById('pertama').style.background = 'green'
+	document.getElementById('pertama').style.color ='blue'
+	document.getElementById('pertama').style.fontsize ="50px"
+	document.getElementById('kedua').style.background = 'pink'
+	document.getElementByid('kedua').style.color ='yellow'
+	document.getElementById('kedua').style.fontsize ="65px"
+	}
+	function jadiPesan()
+	{
+	 dpcument.getElementById('pertama').style.color = 'blue'
+	}
+</script>
+</body>
+</html>
